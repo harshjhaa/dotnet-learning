@@ -1,0 +1,11 @@
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/bin/Debug/net8.0/DailyDinner.Contracts.deps.json
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/bin/Debug/net8.0/DailyDinner.Contracts.dll
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/bin/Debug/net8.0/DailyDinner.Contracts.pdb
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.AssemblyInfoInputs.cache
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.AssemblyInfo.cs
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.csproj.CoreCompileInputs.cache
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.dll
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/refint/DailyDinner.Contracts.dll
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/DailyDinner.Contracts.pdb
+/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/Debug/net8.0/ref/DailyDinner.Contracts.dll

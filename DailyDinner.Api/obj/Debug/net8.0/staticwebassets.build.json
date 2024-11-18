@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Sr8cJVOTIs0hNnh6w1oQVHo+fi+8dJCnuuN3g2jeTyg=",
+  "Source": "DailyDinner.Api",
+  "BasePath": "_content/DailyDinner.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

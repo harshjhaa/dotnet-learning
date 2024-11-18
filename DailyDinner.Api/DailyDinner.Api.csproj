@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>cfdbf2ba-c858-4e63-a5fb-045b5e20f037</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DailyDinner.Contracts\DailyDinner.Contracts.csproj" />
+    <ProjectReference Include="..\DailyDinner.Application\DailyDinner.Application.csproj" />
+    <ProjectReference Include="..\DailyDinner.Infrastructure\DailyDinner.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

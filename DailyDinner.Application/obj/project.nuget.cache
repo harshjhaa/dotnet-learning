@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dVqTozQKVu0=",
+  "success": true,
+  "projectFilePath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/harshjha/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0/microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "/Users/harshjha/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0/microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

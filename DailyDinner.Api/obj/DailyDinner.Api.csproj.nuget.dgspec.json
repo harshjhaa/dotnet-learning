@@ -1,0 +1,349 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Api/DailyDinner.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Api/DailyDinner.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Api/DailyDinner.Api.csproj",
+        "projectName": "DailyDinner.Api",
+        "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Api/DailyDinner.Api.csproj",
+        "packagesPath": "/Users/harshjha/.nuget/packages/",
+        "outputPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harshjha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj": {
+                "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj"
+              },
+              "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/DailyDinner.Contracts.csproj": {
+                "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/DailyDinner.Contracts.csproj"
+              },
+              "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/DailyDinner.Infrastructure.csproj": {
+                "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/DailyDinner.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj",
+        "projectName": "DailyDinner.Application",
+        "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj",
+        "packagesPath": "/Users/harshjha/.nuget/packages/",
+        "outputPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harshjha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/DailyDinner.Domain.csproj": {
+                "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/DailyDinner.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/DailyDinner.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/DailyDinner.Contracts.csproj",
+        "projectName": "DailyDinner.Contracts",
+        "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/DailyDinner.Contracts.csproj",
+        "packagesPath": "/Users/harshjha/.nuget/packages/",
+        "outputPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harshjha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/DailyDinner.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/DailyDinner.Domain.csproj",
+        "projectName": "DailyDinner.Domain",
+        "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/DailyDinner.Domain.csproj",
+        "packagesPath": "/Users/harshjha/.nuget/packages/",
+        "outputPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harshjha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/DailyDinner.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/DailyDinner.Infrastructure.csproj",
+        "projectName": "DailyDinner.Infrastructure",
+        "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/DailyDinner.Infrastructure.csproj",
+        "packagesPath": "/Users/harshjha/.nuget/packages/",
+        "outputPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/harshjha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj": {
+                "projectPath": "/Users/harshjha/workspace/dotnet/DailyDinner/DailyDinner.Application/DailyDinner.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

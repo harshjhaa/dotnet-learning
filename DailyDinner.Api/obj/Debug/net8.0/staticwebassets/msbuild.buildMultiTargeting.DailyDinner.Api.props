@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/DailyDinner.Api.props" />
+</Project>
