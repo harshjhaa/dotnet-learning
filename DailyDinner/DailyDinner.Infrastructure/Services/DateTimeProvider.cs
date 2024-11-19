@@ -1,4 +1,4 @@
-using DailyDinner.Application.Interface.Authentication;
+using DailyDinner.Application.Common.Interface.Authentication;
 
 namespace DailyDinner.Infrastructure.Services;
 
