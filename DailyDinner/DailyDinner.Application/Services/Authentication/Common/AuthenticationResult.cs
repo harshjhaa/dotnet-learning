@@ -1,6 +1,6 @@
 using DailyDinner.Domain.Entities;
 
-namespace DailyDinner.Application.Services.Authentication;
+namespace DailyDinner.Application.Services.Authentication.Common;
 
 public record AuthenticationResult(
     User User,
