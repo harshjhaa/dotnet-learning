@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using DailyDinner.Contracts.Authentication;
-using DailyDinner.Application.Services.Authentication.Commands;
-using DailyDinner.Application.Services.Authentication.Queries;
 using MediatR;
+using DailyDinner.Application.Services.Authentication.Common;
+using DailyDinner.Application.Authentication.Commands.Register;
+using DailyDinner.Application.Authentication.Commands.Login;
 
 namespace DailyDinner.Api.Controllers;
 
@@ -11,55 +12,37 @@ namespace DailyDinner.Api.Controllers;
 
 public class AuthenticationController : ControllerBase
 {
-    private readonly IMediator _mediator;
-    private readonly IAuthenticationCommandService _authenticationCommandService;
-    private readonly IAuthenticationQueryService _authenticationQueryService;
-
-    public AuthenticationController(
-        IAuthenticationCommandService authenticationCommandService, 
-        IAuthenticationQueryService authenticationQueryService)
+    private readonly ISender _mediator;
+    public AuthenticationController(ISender mediator)
     {
-        ArgumentNullException.ThrowIfNull(authenticationCommandService);
-        ArgumentNullException.ThrowIfNull(authenticationQueryService);
-        _authenticationCommandService = authenticationCommandService;
-        _authenticationQueryService = authenticationQueryService;
+        _mediator = mediator;
     }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        if (request == null)
-        {
-            return BadRequest("Request is null");
-        }
+        var command = new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password);
+        
+        AuthenticationResult authResult = await _mediator.Send(command);
 
-        var authResult = _authenticationCommandService.Register(
-            request.FirstName,
-            request.LastName,
-            request.Email,
-            request.Password);
+        // return authResult.Match(
+        //     authResult => Ok(MapAuthResult(authResult)),
+        //     errors => Problem(errors));
 
-        var response = new AuthenticationResponse(
-            authResult.User.Id,
-            authResult.User.FirstName,
-            authResult.User.LastName,
-            authResult.User.Email,
-            authResult.Token);
-
-        return Ok(response);
+        return Ok(authResult);
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest request)
+    public async Task<IActionResult> Login(LoginRequest request)
     {
         if (request == null)
         {
             return BadRequest("Request is null");
         }
 
-        var authResult = _authenticationQueryService.Login(
-            request.Email,
-            request.Password);
+        var query = new LoginQuery(request.Email, request.Password);
+
+        var authResult = await _mediator.Send(query);
 
         var response = new AuthenticationResponse(
             authResult.User.Id,

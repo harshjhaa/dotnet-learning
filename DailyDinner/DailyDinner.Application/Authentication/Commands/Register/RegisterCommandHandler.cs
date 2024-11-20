@@ -3,34 +3,36 @@ using DailyDinner.Application.Common.Interface.Authentication;
 using DailyDinner.Application.Common.Interface.Persistence;
 using DailyDinner.Application.Services.Authentication.Common;
 using DailyDinner.Domain.Entities;
+using MediatR;
 
-namespace DailyDinner.Application.Services.Authentication.Commands;
+namespace DailyDinner.Application.Authentication.Commands.Register;
 
-public class AuthenticationCommandService : IAuthenticationCommandService
+public class RegisterCommandHandler :
+    IRequestHandler<RegisterCommand, AuthenticationResult>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
-
-    public AuthenticationCommandService(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+    public RegisterCommandHandler(
+        IJwtTokenGenerator jwtTokenGenerator,
+        IUserRepository userRepository)
     {
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
     }
-
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password)
+    public async Task<AuthenticationResult> Handle(RegisterCommand command, CancellationToken cancellationToken)
     {
         //Check if user exists
-        if (_userRepository.GetUserByEmail(email) is not null)
+        if (_userRepository.GetUserByEmail(command.Email) is not null)
         {
             throw new DuplicateEmailExceptions();
         }
 
         //Create the user (generate unique id) and Persist to DB
         var user = new User(
-            FirstName: firstName,
-            LastName: lastName,
-            Email: email,
-            Password: password
+            FirstName: command.FirstName,
+            LastName: command.LastName,
+            Email: command.Email,
+            Password: command.Password
         );
 
         _userRepository.AddUser(user);

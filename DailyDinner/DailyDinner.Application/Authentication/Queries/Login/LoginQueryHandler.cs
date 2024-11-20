@@ -1,30 +1,32 @@
-using DailyDinner.Application.Common.Errors;
+using DailyDinner.Application.Authentication.Commands.Login;
 using DailyDinner.Application.Common.Interface.Authentication;
 using DailyDinner.Application.Common.Interface.Persistence;
 using DailyDinner.Application.Services.Authentication.Common;
 using DailyDinner.Domain.Entities;
+using MediatR;
 
-namespace DailyDinner.Application.Services.Authentication.Queries;
+namespace DailyDinner.Application.Authentication.Queries.Login;
 
-public class AuthenticationQueryService : IAuthenticationQueryService
+public class LoginQueryHandler :
+    IRequestHandler<LoginQuery, AuthenticationResult>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
-
-    public AuthenticationQueryService(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository)
+    public LoginQueryHandler(
+        IJwtTokenGenerator jwtTokenGenerator,
+        IUserRepository userRepository)
     {
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
     }
-
-    public AuthenticationResult Login(string email, string password)
+    public async Task<AuthenticationResult> Handle(LoginQuery query, CancellationToken cancellationToken)
     {
-        if (_userRepository.GetUserByEmail(email) is not User user)
+        if (_userRepository.GetUserByEmail(query.Email) is not User user)
         {
             throw new Exception("User not found");
         }
 
-        if (user.Password != password)
+        if (user.Password != query.Password)
         {
             throw new Exception("User not found");
         }
