@@ -1,3 +1,4 @@
+using DailyDinner.Application.Common.Errors;
 using DailyDinner.Application.Common.Interface.Authentication;
 using DailyDinner.Application.Common.Interface.Persistence;
 using DailyDinner.Domain.Entities;
@@ -37,7 +38,7 @@ public class AuthenticationService : IAuthenticationService
         //Check if user exists
         if(_userRepository.GetUserByEmail(email) is not null)
         {
-            throw new Exception("User already exists");
+            throw new DuplicateEmailExceptions();
         }
 
         //Create the user (generate unique id) and Persist to DB
